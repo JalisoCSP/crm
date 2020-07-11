@@ -3,3 +3,57 @@
 @tailwind components;
 
 @tailwind utilities;
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+svg {
+  @apply inline;
+}
+
+.form-label {
+  @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+}
+
+.form-field {
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border
+    border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight;
+}
+.form-field:focus {
+  @apply outline-none border-gray-500;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg no-underline;
+}
+
+tr:hover {
+  @apply bg-gray-200;
+}
+
+th {
+  @apply px-6 py-3 border-b border-gray-400 bg-gray-200 text-left text-xs
+    leading-4 font-medium text-gray-600 uppercase tracking-wider;
+}
+
+td {
+  @apply px-6 py-4 whitespace-no-wrap border-b border-gray-400;
+}
+
+.menu-item {
+  @apply text-gray-700 ml-6;
+}
+
+.menu-item:hover {
+  @apply text-black;
+}
+
