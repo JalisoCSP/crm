@@ -61,7 +61,7 @@ class ContactsController < ApplicationController
   end
 
   def contact_params
-    params.fetch(:contact, {}).permit(:user_id, :name, :company, :location, :email, :phone, :website, :twitter, :notes)
+    params.fetch(:contact, {}).permit(:user_id, :name, :image, :company, :location, :email, :phone, :website, :twitter, :notes)
   end
 
   def invalid_contact

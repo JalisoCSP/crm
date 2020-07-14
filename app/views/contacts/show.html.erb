@@ -5,6 +5,7 @@
   <%= link_to "Edit", [:edit, @contact], class: "btn bg-blue-200 align-middle ml-4" %>
 </div>
 
+<%= image_tag @contact.displayed_image, loading: "lazy", alt: @contact.name, class: "rounded-full" %>
 <%= @contact.company %>
 <%= @contact.location %>
 <%= @contact.email %>
