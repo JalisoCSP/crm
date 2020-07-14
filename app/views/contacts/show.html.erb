@@ -1,0 +1,22 @@
+<div class="w-full pb-4">
+  <h1 class="inline align-middle">
+    <%= @contact.name %>
+  </h1>
+  <%= link_to "Edit", [:edit, @contact], class: "btn bg-blue-200 align-middle ml-4" %>
+</div>
+
+<%= @contact.company %>
+<%= @contact.location %>
+<%= @contact.email %>
+<%= @contact.phone %>
+<%= @contact.twitter %>
+<%= @contact.notes %>
+
+<div class="w-full pb-4 pt-8">
+  <h2 class="inline align-middle">
+    Events
+  </h2>
+  <%= link_to "Add New", "/", class: "btn bg-blue-200 align-middle ml-4" %>
+</div>
+
+# TODO

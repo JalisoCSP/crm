@@ -1,0 +1,31 @@
+<div class="w-full pb-4">
+  <h1 class="inline align-middle">
+    Contacts
+  </h1>
+  <%= link_to "Add New", [:new, :contact], class: "btn bg-blue-200 align-middle ml-4" %>
+</div>
+<div class="-my-2 py-2 overflow-x-auto">
+  <div class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+    <table class="min-w-full">
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Phone
+          </th>
+          <th>
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <%= render partial: "table_row", collection: @contacts %>
+      </tbody>
+    </table>
+  </div>
+</div>

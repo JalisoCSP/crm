@@ -1,0 +1,15 @@
+<tr>
+  <td>
+    <%= link_to table_row.name, table_row %>
+  </td>
+  <td>
+    <%= table_row.email %>
+  </td>
+  <td>
+    <%= table_row.phone %>
+  </td>
+  <td>
+    <%= link_to "Edit", [:edit, table_row], class: "btn bg-yellow-200" %>
+    <%= link_to "Delete", table_row, method: :delete, class: "btn bg-red-200" %>
+  </td>
+</tr>
