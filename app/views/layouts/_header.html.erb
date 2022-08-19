@@ -10,6 +10,7 @@
       <div class="flex-1 text-right">
 
         <% if user_signed_in? %>
+          <%= link_to "Events", events_path, class: "menu-item" %>
           <%= link_to "Contacts", contacts_path, class: "menu-item" %>
 
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "menu-item" %>

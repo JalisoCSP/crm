@@ -1,7 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :edit, :update, :destroy]
-
-  rescue_from ActiveRecord::RecordNotFound, with: :invalid_contact
+  before_action :set_records, only: [:show, :edit, :update, :destroy]
 
   def index
     @contacts = current_user.contacts
@@ -48,7 +46,7 @@ class ContactsController < ApplicationController
 
   private
 
-  def set_contact
+  def set_records
     @contact = current_user.contacts.find(params[:id])
   end
 
@@ -62,9 +60,5 @@ class ContactsController < ApplicationController
 
   def contact_params
     params.fetch(:contact, {}).permit(:user_id, :name, :image, :company, :location, :email, :phone, :website, :twitter, :notes)
-  end
-
-  def invalid_contact
-    redirect_to contacts_path, alert: "Invalid Contact"
   end
 end
